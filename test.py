@@ -1,4 +1,3 @@
-print ("здраствуйте")
 import unittest
 import start
 
