@@ -21,11 +21,11 @@ class CalcTests(unittest.TestCase):
         self.assertEqual(0,len(res))
 
     def test_normal_a(self):
-        res = start.task_a(self.a, self.b,2.2,0.3, 0.7)
+        res = start.task_a(self.a, self.b,0.3,2.2, 0.7)
         self.assertEqual(6,len(res))
 
     def test_zero_a(self):
-        res = start.task_a(self.a,self.b,2.2,0.3,0,7)
+        res = start.task_a(self.a,self.b,0.3,2.2,0.7)
         self.assertEqual(0,len(res))    
 
     
