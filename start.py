@@ -38,3 +38,4 @@ if __name__ == "__main__":
     res = task_b(a,b,x_lst)
     print("task B")
     print_result(res)
+    #
