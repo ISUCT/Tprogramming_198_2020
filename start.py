@@ -1,6 +1,6 @@
 import math
-a = 4.1
-b = 2.7
+a = 2.7
+b = 4.1
 x = 1.2
 
 def calc(a, b, x):
@@ -29,13 +29,12 @@ def task_b(a,b, x_lst):
         res.append((x,y))
     return res
 
-if _name_ == "_main_":    
-    res = task_a(a,b,4.1, 2.7, 1.2)
+if __name__ == "__main__":    
+    res = task_a(a,b,1.2, 2.7, 4.1)
     print("task A")
     print_result(res)
 
-    x_lst [1.9, 2.15, 2.34, 2.73, 3.16]
+    x_lst=[1.9, 2.15, 2.34, 2.73, 3.16]
     res = task_b(a,b,x_lst)
     print("task B")
     print_result(res)
-    а
