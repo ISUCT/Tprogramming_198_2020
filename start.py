@@ -1,4 +1,6 @@
 print ("hello world")
+print ("hello")
+
 import math
 a = 0.1
 b = 0.5
