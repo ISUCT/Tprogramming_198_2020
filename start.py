@@ -39,3 +39,4 @@ if __name__ == "__main__":
     print("-------------Task B -------------")
     print_result(res)
 
+
