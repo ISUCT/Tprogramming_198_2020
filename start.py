@@ -16,10 +16,30 @@ def task_a(a, b, xn, xk, dx):
         res.append((x,y))
         x = x + dx
     return res
+
 def print_result(result):
     for item in result:
         x, y = item
         print(f"x={x} y={y}")
 
-result = task_a(a, b, 3.2, 6.2, 0.6)
-print_result(result)
+def task_b(a, b, x_lst):
+    res = []
+    for x in x_lst:
+        y = calc(a, b, x)
+        res.append((x, y))
+    return res
+
+
+if __name__ == "__main__":
+    a = 0.4
+    b = 0.8
+
+    res = task_a(a, b, 0.77, 1.77, 0.2)
+    print("-------------Task A -------------")
+    print_result(res)
+
+    x_lst = [4.48, 3.56, 2.78, 5.28, 3.21]
+    res = task_b(a,b,x_lst)
+    print("-------------Task B -------------")
+
+    print_result(res)
