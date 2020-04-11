@@ -15,7 +15,10 @@ class Employee:
     def increase_date(self):
         self.__date = self.__date + 1
 
-     def __str__(self):
+    def startWork(self):
+        print(f"я{self.name}, я устроился на работу")
+
+    def __str__(self):
         return f"name: {self.name}, date: {self.date}" + """
             |\_/|        D\___/\
             (0_0)         (0_o)
@@ -34,4 +37,4 @@ if __name__ == "__main__":
     employee2.increase_date()
 
     print(employee2.name, employee2.date)
-    print(fish2)
+    print(employee2)
