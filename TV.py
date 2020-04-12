@@ -48,7 +48,7 @@ if __name__ == "__main__":
     print(TV2.name, TV2.chanel)
     TV2.swim()
 
-    TV2.chanel = 103
+    
     TV2.chanel = "Test"
 
     print(TV2)
