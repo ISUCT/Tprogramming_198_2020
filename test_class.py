@@ -27,6 +27,5 @@ class ClassTests(unittest.TestCase):
         tst.weight = "5 кг"
         self.assertEqual(0, tst.weight)
 
-
 if __name__ == '__main__':
     unittest.main()
