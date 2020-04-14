@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>{{ title }} - Microblog</title>
+    </head>
+    <body>
+        <h1>Список кроликов</h1>
+        <a href="/rabbits/new">Добавить</a>
+        <ul>
+            {% for item in collection %}
+            <li><a href="{{ 'rabbits/%s' % item.name }}"> Имя: {{item.name}} </a></li>
+            {% endfor %}
+        </ul>
+    </body>
+    
+    </html>
