@@ -23,9 +23,16 @@ def params():
     return f'Hello {a} + {b} = {a + b}'
     # http://127.0.0.1:5000/params?a=5&b=8
 
-@app.route('/calc', methods=['GET', 'POST'])
-def calc():
+@app.route('/calc/<type_calc>', methods=['GET', 'POST'])
+def calc(type_calc):
     a = request.form.get("a", default=0, type=float)
     b = request.form.get("b", default=0, type=float)
-    summ = a + b
-    return render_template('calc.html', result=summ)
+    res = 0
+    sign = ""
+    if type_calc == "summ":
+        res = a + b
+        sign = "+"
+    if type_calc == "mul":
+        res = a*b
+        sign = "x"
+    return render_template('calc.html', result=res, sign=sign)
