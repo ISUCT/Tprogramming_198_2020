@@ -2,6 +2,18 @@ from flask import Flask
 app = Flask(__name__)
 import datetime
 from flask import render_template
+import tv as Tv
+
+collection = []
+def init():
+    tv1 = TV.TV("samsung")
+    collection.append(tv1)
+    tv2 = TV.TV("LD")
+    collection.append(tv2)
+    tv3 = TV.TV("Philips")
+    collection.append(tv3)
+
+    init()
 
 @app.route('/')
 def hello_world():
@@ -34,3 +46,7 @@ def calc(type_calc):
         res = a*b
         sign = "x"
     return render_template('calc.html', result=res, sign=sign)
+
+@app.route("/TV/new", methods=["GET", "POST"])
+def tv_add():
+    name = request.form.get("name", default = "")
