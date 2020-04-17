@@ -36,3 +36,7 @@ def calc(type_calc):
         res = a*b
         sign = "x"
     return render_template('calc.html', result=res, sign=sign)
+
+    ingredients = ['слизни', 'пиявки', 'катышки из пупка гориллы', 'брови гусеницы', 'пальцы многоножки']
+for i, ingrediyent in enumerate(ingredients):
+    print(i + 1, ingrediyent)
