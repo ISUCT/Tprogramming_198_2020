@@ -10,7 +10,7 @@ def get_max_multiplication_two_number(list_numbers):
     # если элементов массива меньше 2 то None
     if len(format_list) < 2:
         return None
-    # убераем повторяющиеся элементы массива
+    # убираем повторяющиеся элементы массива
     format_list = list(set(format_list))
     # сортируем
     format_list.sort()
