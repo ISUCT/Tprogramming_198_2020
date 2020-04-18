@@ -61,16 +61,26 @@ def calc(type_calc):
     return render_template('calc.html', result=res, sign=sign)
 @app.route("/employees")
 def employees():
-    print (collection)
     return render_template("employees.html", collection=collection)
 
+from flask import redirect
 @app.route("/employees/new", methods=["GET", "POST"])
 def employee_add():
     name = request.form.get("name", default="", type=str)
     date = request.form.get("date", default=0, type=float)
     if name:
+        print("Got name")
         employee = Employee.Employee(name)
         employee.date = date
         collection.append(employee)
-
+        return redirect("/employees")
     return render_template("new.html")
+
+@app.route("/employees/<name>")
+def employee(name):
+    item = None
+    for el in collection:
+        if name == el.name:
+            item = el
+            break
+    return render_template("employee.html", item=item)

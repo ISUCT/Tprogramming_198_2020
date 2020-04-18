@@ -4,10 +4,10 @@
     </head>
     <body>
         <h1>Список работников</h1>
+        <a href="/employees/new">Добавить</a>
        <ul>
         {% for item in collection %}
-        <div>Имя: {{item.name}}</div>
-        {% endfor %}
+        <li><a href="{{ 'employees/%s' % item.name }}"> Имя: {{item.name}} </a></li>        {% endfor %}
        </ul>
     </body>
 </html>
