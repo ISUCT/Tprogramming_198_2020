@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <title>{{ title }} - Comps</title>
+</head>
+
+<body>
+    <h1>Список компьютеров</h1>
+    <a href="/comps/new">Добавить</a>
+    <ul>
+        {% for item in collection %}
+        <li><a href="{{ 'comps/%s' % item.name }}"> Имя: {{item.name}} </a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
