@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>{{ УРР }} - Microblog</title>
+    </head>
+    <body>
+        <h1>Список работников</h1>
+        <a href="/employees/new">Добавить</a>
+       <ul>
+        {% for item in collection %}
+        <li><a href="{{ 'employees/%s' % item.name }}"> Имя: {{item.name}} </a></li>        {% endfor %}
+       </ul>
+    </body>
+</html>
