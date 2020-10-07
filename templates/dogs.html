@@ -1,0 +1,17 @@
+<html>
+
+<head>
+    <title>{{ title }} - Dogs</title>
+</head>
+
+<body>
+    <h1>Список собак</h1>
+    <a href="/fishes/new">Добавить</a>
+    <ul>
+        {% for item in collection %}
+        <li><a href="{{ 'fishes/%s' % item.name }}"> Имя: {{item.name}} </a></li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
