@@ -25,5 +25,14 @@ class SummTests(unittest.TestCase):
         res = summ(-2,2)
         self.assertEqual(0,res)
 
+    def test_one_negative_and_text(self):
+        try:
+            res = summ(-2,"2")
+        except:
+            self.assertTrue(True)
+            return
+        self.fail()
+        
+
 if __name__ == '__main__':
     unittest.main()
